@@ -10,25 +10,37 @@
 1. Clone the repository
 2. Run `npm install` to install dependencies
 
+### Models
+- Users
+- Products
+- Orders
+- Order Products
+
 ### Database Setup
-1. Create two PostgreSQL databases:
+1. Create two PostgreSQL databases in pgAdmin or psql:
+
 ```sql
 CREATE DATABASE storefront;
 CREATE DATABASE storefront_test;
 ```
+
 2. Create a user and grant privileges:
+
 ```sql
 CREATE USER storefront_user WITH PASSWORD 'your_password';
 GRANT ALL PRIVILEGES ON DATABASE storefront TO storefront_user;
 GRANT ALL PRIVILEGES ON DATABASE storefront_test TO storefront_user;
 ```
+
 3. Run migrations:
+
 ```
 npm run migrate-up
 ```
 
 ### Environment Variables
-Create a `.env` file with the following:
+Create a `.env` file in the root of the project with the following:
+
 ```
 ENV=dev
 PORT=3000
@@ -51,6 +63,7 @@ Server runs on port **3000**
 
 ### Running the Tests
 ```
+npm run build
 npm run test
 ```
 

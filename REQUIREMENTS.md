@@ -28,6 +28,14 @@
 | POST | `/orders/:id/products` | Protected |
 | DELETE | `/orders/:id` | Protected |
 
+### Order Products
+| Method | Endpoint | Access |
+|---|---|---|
+| GET | `/order-products` | Protected |
+| GET | `/order-products/:id` | Protected |
+| POST | `/order-products` | Protected |
+| DELETE | `/order-products/:id` | Protected |
+
 ### Dashboard
 | Method | Endpoint | Access |
 |---|---|---|
@@ -73,3 +81,4 @@ CREATE TABLE order_products (
     quantity INTEGER NOT NULL
 );
 ```
+
